@@ -1,0 +1,24 @@
+<script>
+    function addProduct(cid, pid){
+        fetch(`http://localhost:8080/api/carts/${cid}/products/${product._id}`),{
+            method: "POST"
+        }
+    }
+</script>
+
+<div style="width: 75%;">
+    <div>
+        <div>
+            <img src='{{product.thumbnail}}' alt="{{product.title}}">
+        </div>
+        <div>
+            <div>
+                <h3>{{product.title}}</h5>
+                    <p>{{product.description}}</p>
+                    <p>Price: usd {{product.price}}</p>
+                    <a href="/api/products">Home</a>
+                    <button onclick="addProduct({{cid}}, {{product._id}})">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
